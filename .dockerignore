@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# Tests
+tests/
+
+# Environment files
+.env
+
+# macOS
+.DS_Store
+
+# Docker itself
+Dockerfile
+.dockerignore
