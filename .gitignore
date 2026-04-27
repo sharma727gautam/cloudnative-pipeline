@@ -14,6 +14,9 @@ venv/
 .AppleDouble
 .LSOverride
 
+# Kubernetes
+k8s/secret.yaml
+
 # Terraform
 .terraform/
 *.tfstate
