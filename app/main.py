@@ -1,12 +1,10 @@
-import os
 import logging
+import os
+
 from flask import Flask, jsonify
 from prometheus_flask_exporter import PrometheusMetrics
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s %(levelname)s %(name)s %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
@@ -19,11 +17,7 @@ metrics.info("app_info", "CloudNative Pipeline application info", version="1.0.0
 @app.route("/")
 def home():
     logger.info("Home endpoint called")
-    return jsonify({
-        "app": "cloudnative-pipeline",
-        "version": "1.0.0",
-        "status": "running"
-    })
+    return jsonify({"app": "cloudnative-pipeline", "version": "1.0.0", "status": "running"})
 
 
 @app.route("/health")
